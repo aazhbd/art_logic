@@ -5,14 +5,28 @@
 {% block body_class %}template-newsindexpage{% endblock %}
 
 {% block content %}
+    <article class="z-depth-1 p-4 container-fluid">
     <h1>{{ page.title }}</h1>
 
     <div class="intro">{{ page.intro|richtext }}</div>
 
     {% for post in page.get_children.specific %}
-        <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
-        {{ post.specific.intro }}
-        {{ post.specific.body|richtext }}
+        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+            <div class="mdl-card__media">
+                <img class="article-image" src="#" border="0" alt="">
+            </div>
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text"><a href="{% pageurl post %}">{{ post.title }}</a></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                {{ post.specific.intro }}
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{% pageurl post %}">Read more</a>
+            </div>
+        </div>
     {% endfor %}
+
+    </article>
 
 {% endblock %}

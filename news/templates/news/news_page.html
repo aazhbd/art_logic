@@ -5,14 +5,17 @@
 {% block body_class %}template-newspage{% endblock %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date }}</p>
+    <article class="z-depth-1 p-4 container-fluid">
 
-    <div class="intro">{{ page.intro }}</div>
+        <h1>{{ page.title }}</h1>
+        <p class="meta">{{ page.date }}</p>
 
-    {% image page.feed_image width-600 %}
+        <div class="intro">{{ page.intro }}</div>
 
-    {{ page.body|richtext }}
+        {% image page.feed_image width-600 %}
+
+        {{ page.body|richtext }}
+    </article>
 
     <p><a href="{{ page.get_parent.url }}">Return to list of projects</a></p>
 
