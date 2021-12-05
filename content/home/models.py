@@ -7,6 +7,8 @@ from wagtail.search import index
 from wagtailmarkdown.edit_handlers import MarkdownPanel
 from wagtailmarkdown.fields import MarkdownField
 
+from projects.models import ProjectPage
+
 
 class HomePage(Page):
     home_title = models.CharField(max_length=600, blank=True)
@@ -23,3 +25,8 @@ class HomePage(Page):
         index.SearchField('title'),
         index.SearchField('body'),
     ]
+
+    def get_context(self, request):
+        context = super(HomePage, self).get_context(request)
+        context['projects'] = ProjectPage.objects.live()
+        return context
