@@ -9,25 +9,25 @@
 {% endblock extra_css %}
 
 {% block home_message %}
-    <div id="intro" class="bg-image vh-100 shadow-2-strong">
-        <div class="mask intro_content bg-image">
-            <div class="container d-flex align-items-center justify-content-center text-center h-100">
-                <div class="text-white">
-                    <h3>{{ page.title }}</h3>
-                    {{ page.home_title }}
-                    {{ page.body|markdown }}
-                    <a class="btn btn-outline-light m-2" href="/projects" role="button" data-mdb-ripple-color="dark">Projects</a>
-                    <a class="btn btn-outline-light m-2" href="/about" role="button" data-mdb-ripple-color="dark">About</a>
-                </div>
+<div id="intro" class="bg-image vh-100 shadow-2-strong">
+    <div class="mask intro_content bg-image">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+            <div class="text-white">
+                <h3>{{ page.title }}</h3>
+                {{ page.home_title }}
+                {{ page.body|markdown }}
+                <a class="btn btn-outline-light m-2" href="/projects" role="button" data-mdb-ripple-color="dark">Projects</a>
+                <a class="btn btn-outline-light m-2" href="/about" role="button" data-mdb-ripple-color="dark">About</a>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <main class="mt-5">
-    <div class="container text-center">
-        <h4 class="mb-5">My Projects</h4>
+<div class="container text-center">
+    <h4 class="mb-5">My Projects</h4>
     <section>
         <ul id="home-gallery">
             {% for post in projects %}
@@ -39,7 +39,6 @@
             {% endfor %}
         </ul>
     </section>
-
-    </div>
+</div>
 </main>
 {% endblock content %}
