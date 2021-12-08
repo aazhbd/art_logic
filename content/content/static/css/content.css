@@ -7,6 +7,10 @@
     src: url(../fonts/LithosProRegular.ttf);
 }
 
+#intro {
+    height: 25vh;
+}
+
 @media (min-width: 992px) {
     #intro {
         margin-top: -10px;
