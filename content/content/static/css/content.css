@@ -14,8 +14,18 @@
     }
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     font-family: 'Bree Serif', sans-serif;
+    margin: 0 0 100px;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 #logo {
@@ -48,3 +58,10 @@ body {
     min-height: 15vh;
 }
 
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1vh;
+    width: 100%;
+}
