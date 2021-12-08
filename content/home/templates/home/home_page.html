@@ -17,7 +17,7 @@
                     {{ page.home_title }}
                     {{ page.body|markdown }}
                     <a class="btn btn-outline-light m-2" href="/projects" role="button" data-mdb-ripple-color="dark">Projects</a>
-                    <a class="btn btn-outline-light m-2" href="/contact" role="button" data-mdb-ripple-color="dark">Contact</a>
+                    <a class="btn btn-outline-light m-2" href="/about" role="button" data-mdb-ripple-color="dark">About</a>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
             {% for post in projects %}
                 <li>
                     {% with post.image as main_image %}
-                        {% if main_image %}{% image main_image height-320 class="img-fluid" %}{% endif %}
+                        {% if main_image %}<a data-mdb-ripple-color="dark" href="{% pageurl post %}">{% image main_image height-320 class="img-fluid" %}</a>{% endif %}
                     {% endwith %}
                 </li>
             {% endfor %}
