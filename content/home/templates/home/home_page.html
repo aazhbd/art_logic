@@ -27,7 +27,7 @@
             {% for post in projects %}
                 <li>
                     {% with post.image as main_image %}
-                        {% if main_image %}<a data-mdb-ripple-color="dark" href="{% pageurl post %}">{% image main_image height-320 class="img-fluid" %}</a>{% endif %}
+                        {% if main_image %}<a href="{% pageurl post %}" class="ripple">{% image main_image height-320 class="img-fluid rounded" %}</a>{% endif %}
                     {% endwith %}
                 </li>
             {% endfor %}
