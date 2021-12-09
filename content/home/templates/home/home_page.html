@@ -27,7 +27,7 @@
             {% for post in projects %}
                 <li>
                     {% with post.image as main_image %}
-                        {% if main_image %}<a href="{% pageurl post %}" class="ripple">{% image main_image height-320 class="img-fluid rounded" %}</a>{% endif %}
+                        {% if main_image %}<a href="{% pageurl post %}" class="ripple">{% image main_image height-320 class="img-fluid rounded-2" %}</a>{% endif %}
                     {% endwith %}
                 </li>
             {% endfor %}
