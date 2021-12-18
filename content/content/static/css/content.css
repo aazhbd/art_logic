@@ -8,13 +8,13 @@
 }
 
 #intro {
-    height: 30vh;
+    height: 20vh;
 }
 
 @media (min-width: 992px) {
     #intro {
         margin-top: -10px;
-        height: 30vh !important;
+        height: 20vh !important;
     }
 }
 
