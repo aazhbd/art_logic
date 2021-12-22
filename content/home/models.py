@@ -6,11 +6,12 @@ from wagtail.search import index
 
 from wagtailmarkdown.edit_handlers import MarkdownPanel
 from wagtailmarkdown.fields import MarkdownField
+from wagtailmetadata.models import MetadataPageMixin
 
 from projects.models import ProjectPage
 
 
-class HomePage(Page):
+class HomePage(MetadataPageMixin, Page):
     home_title = models.CharField(max_length=600, blank=True)
     body = MarkdownField(blank=True)
     image = models.ForeignKey('wagtailimages.Image', blank=True, null=True, on_delete=models.PROTECT, related_name='home_image')
