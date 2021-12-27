@@ -8,6 +8,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.contrib.sitemaps.views import sitemap
 
 from search import views as search_views
+from django.views.generic.base import RedirectView
 from projects import views
 
 urlpatterns = [
@@ -19,6 +20,8 @@ urlpatterns = [
 
     path('documents/', include(wagtaildocs_urls)),
     path('search/', search_views.search, name='search'),
+
+    path('downloads/', RedirectView.as_view(url='/projects', permanent=False), name='projects')
 
 ]
 
