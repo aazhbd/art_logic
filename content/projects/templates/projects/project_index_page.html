@@ -15,7 +15,7 @@
 {% block content %}
 <main class="mt-5">
     <div class="container page-content">
-        {{ page.body|markdown }}
+        <article class="p-2 mb-2 markdown-body">{{ page.body|safe|richtext|markdown }}</article>
 
         <section class="text-center">
             <div class="row">
