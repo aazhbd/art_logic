@@ -12,7 +12,9 @@
 
 {% block home_message %}
     <div class="text-white mt-1">
+        {% if page.home_title %}
         <h4>{{ page.home_title }}</h4>
+        {% endif %}
         {{ page.body|markdown }}
         <a class="btn btn-light m-2" href="/projects" role="button" data-mdb-ripple-color="dark">Projects</a>
         <a class="btn btn-light m-2" href="/about" role="button" data-mdb-ripple-color="dark">About</a>
