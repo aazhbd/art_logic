@@ -25,17 +25,15 @@
 <main class="mt-5">
 <div class="container text-center">
     <h4 class="mb-5">My Projects</h4>
-    <section>
-        <ul id="home-gallery">
-            {% for post in projects %}
+    <ul id="home-gallery">
+        {% for post in projects %}
             <li>
-            {% with post.image as main_image %}
-                {% if main_image %}<a href="{% pageurl post %}" class="ripple">{% image main_image height-320 class="img-fluid rounded-2" %}</a>{% endif %}
-            {% endwith %}
+                {% with post.image as main_image %}
+                    {% if main_image %}<a href="{% pageurl post %}" class="ripple">{% image main_image height-320 class="img-fluid rounded-2" %}</a>{% endif %}
+                {% endwith %}
             </li>
-            {% endfor %}
-        </ul>
-    </section>
+        {% endfor %}
+    </ul>
 </div>
 </main>
 {% endblock content %}
