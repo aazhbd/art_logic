@@ -15,22 +15,18 @@
 {% endblock %}
 
 {% block content %}
-    <main class="mt-5">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{{ page.get_parent.url }}">Projects</a></li>
-                    <li class="breadcrumb-item active">{{ page.title }}</li>
-                </ol>
-            </nav>
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12 mb-12">
-                    <article class="shadow-1-soft p-4 mb-4 markdown-body">{{ page.body|safe|richtext|markdown }}</article>
-                </div>
-            </div>
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ page.get_parent.url }}">Projects</a></li>
+            <li class="breadcrumb-item active">{{ page.title }}</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 mb-12">
+            <article class="shadow-1-soft p-4 mb-4 markdown-body">{{ page.body|safe|richtext|markdown }}</article>
         </div>
-    </main>
-
+    </div>
+</div>
 {% endblock %}
