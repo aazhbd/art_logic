@@ -95,12 +95,12 @@
         <a class="text-white" href="/about">About</a>
     </div>
 </footer>
-<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/content.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/lightslider.min.js' %}"></script>
-<script type="text/javascript">
+<script src="{% static 'js/mdb.min.js' %}"></script>
+<script src="{% static 'js/content.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/lightslider.min.js' %}"></script>
+<script>
 $(document).ready(function() {
     $('#home-gallery').lightSlider({
         item: 2,
@@ -132,6 +132,6 @@ $(document).ready(function() {
 });
 </script>
 {% block extra_js %}{% endblock %}
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d453f82757e9c0"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d453f82757e9c0"></script>
 </body>
 </html>
