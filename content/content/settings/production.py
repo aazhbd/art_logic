@@ -4,7 +4,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEBUG = False
 
-SECRET_KEY = 'django-insecure-+c$%+(&oaw(0x53ah@#1$s)-xh7r#d#d#$5q*k*ujn%7gt*_y2'
+SECRET_KEY = '4rl!k3#gt@(7n(611^l@8(41+dgyupvqo-t3krb&#w@aw#u_er'
 
 ALLOWED_HOSTS = ['articulatedlogic.com', 'www.articulatedlogic.com']
 
