@@ -17,4 +17,5 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "content.settings.production")
 
 application = get_wsgi_application()
 application = WhiteNoise(application, root='/home/articulatedlogic.com/webapps/art_logic/content/static')
+application.add_files('/home/articulatedlogic.com/webapps/art_logic/content/media', prefix='media/')
 
