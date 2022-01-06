@@ -132,3 +132,4 @@ dmypy.json
 .idea
 # uploaded images
 /media
+content/settings/production.py
