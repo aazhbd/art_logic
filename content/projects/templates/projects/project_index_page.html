@@ -31,8 +31,8 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="{% pageurl post %}">{{ post.title }}</a></h5>
-                        <p class="card-text">{{ post.specific.project_title|truncatechars:80 }}</p>
-                        <a href="{% pageurl post %}" class="btn btn-primary float-end">Read More</a>
+                        <p class="card-text" style="min-height: 60px;">{{ post.specific.project_title|truncatechars:80 }}</p>
+                        <a href="{% pageurl post %}" class="btn btn-info float-end text-white" data-mdb-ripple-color="dark">Read More</a>
                     </div>
                 </div>
             </div>
