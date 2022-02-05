@@ -7,6 +7,11 @@
     src: url(../fonts/LithosProRegular.ttf);
 }
 
+@font-face {
+    font-family: BreeSerif;
+    src: url(../fonts/BreeSerif-Regular.ttf);
+}
+
 #intro {
     height: 22vh;
 }
@@ -24,8 +29,11 @@ html {
 }
 
 body {
-    font-family: 'Bree Serif', sans-serif;
     margin: 0 0 100px;
+}
+
+.markdown-body {
+    font-family: 'BreeSerif', sans-serif !important;
 }
 
 a {
