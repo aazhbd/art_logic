@@ -25,11 +25,21 @@
     <h4 class="mb-5">My Projects</h4>
     <ul id="home-gallery">
         {% for post in projects %}
-            <li>
-                {% with post.image as main_image %}
-                    {% if main_image %}<a href="{% pageurl post %}" class="ripple">{% image main_image height-320 class="img-fluid rounded-2" %}</a>{% endif %}
-                {% endwith %}
-            </li>
+        <li>
+            <div class="card m-2 shadow-1-soft">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    {% with post.image as main_image %}
+                        {% if main_image %}{% image main_image fill-640x320 class="img-fluid rounded-2" %}{% endif %}
+                    {% endwith %}
+                    <a href="{% pageurl post %}"><div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div></a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="{% pageurl post %}">{{ post.title }}</a></h5>
+                    <p class="card-text" style="min-height: 60px;">{{ post.project_title|truncatechars:80 }}</p>
+                    <a href="{% pageurl post %}" class="btn btn-info p-2 float-end" data-mdb-ripple-color="dark">Read More</a>
+                </div>
+            </div>
+        </li>
         {% endfor %}
     </ul>
 </div>
