@@ -1,7 +1,7 @@
 from django.db import models
 
 from wagtail.models import Page
-from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.admin.panels import FieldPanel, InlinePanel
 from wagtail.search import index
 
 from wagtailmarkdown.edit_handlers import MarkdownPanel
