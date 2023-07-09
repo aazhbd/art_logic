@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.views.generic import TemplateView
-from wagtail.wagtailcore.models import Site
+from wagtail.models import Site
 
 
 class CrawlerView(TemplateView):
